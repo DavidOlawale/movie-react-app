@@ -1,0 +1,28 @@
+.input_container {
+  height: 2.5rem;
+  padding: 0px 5px 0px 5px;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid white;
+}
+
+.mt{
+  margin-top: -8rem;
+}
+.input {
+  outline: none;
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  color: white;
+}
+.input:hover,
+.input:active,
+.input:focus {
+  outline: none;
+  border: none;
+}
+
+.pl_10{
+  padding-left: 2.5rem;
+}

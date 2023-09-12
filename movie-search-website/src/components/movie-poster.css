@@ -1,0 +1,9 @@
+.pl_20 {
+  padding-left: 10%;
+}
+.image_style {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-position: 100% 30%;
+}
