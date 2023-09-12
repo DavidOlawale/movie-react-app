@@ -1,18 +1,16 @@
 // App.js
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import MovieDetails from './components/MovieDetails';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/movies/:id" component={MovieDetails} />
-      </Switch>
-    </Router>
+    <Routes>
+      <Route path="/" exact element={<Home />} />
+      <Route path="/movies/:id" element={<MovieDetails />} />
+    </Routes>
   );
 }
 
