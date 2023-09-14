@@ -18,7 +18,7 @@ function Home() {
     fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", {
       headers: {
         "content-type": "application/json",
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZTQ5MTlkMDYzMWU4OWU5MTgyMDc4NTBiZjJiNGIwZCIsInN1YiI6IjY0ZmVkYTJjZGI0ZWQ2MTA0MzA4NjVlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SPMygPqE4bA0h-_L2xez1SicsVFYMitC1CtoEzVWmJk`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZTcyN2VmZjU3MjRhM2Q3ZjM3YjBiMGRhY2EwN2I2MiIsInN1YiI6IjY0ZmVjZmYxNmEyMjI3MDBjM2I1MzM0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xSNA6RDhbNpE_I90ngPddOpK5ccz-TqeG_Kq6y7ZGsk`,
       },
     }).then(async (res) => {
       if (!res.ok) {
@@ -28,6 +28,7 @@ function Home() {
       } else {
         const result = await res.json();
         const movieToSet = result.results.slice(0, 10);
+        console.log(movieToSet[1])
         setMovies(movieToSet);
         setLoading(false);
       }
@@ -42,7 +43,7 @@ function Home() {
       headers: {
         accept: "application/json",
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZTQ5MTlkMDYzMWU4OWU5MTgyMDc4NTBiZjJiNGIwZCIsInN1YiI6IjY0ZmVkYTJjZGI0ZWQ2MTA0MzA4NjVlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SPMygPqE4bA0h-_L2xez1SicsVFYMitC1CtoEzVWmJk",
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZTcyN2VmZjU3MjRhM2Q3ZjM3YjBiMGRhY2EwN2I2MiIsInN1YiI6IjY0ZmVjZmYxNmEyMjI3MDBjM2I1MzM0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xSNA6RDhbNpE_I90ngPddOpK5ccz-TqeG_Kq6y7ZGsk",
       },
     };
     fetch(

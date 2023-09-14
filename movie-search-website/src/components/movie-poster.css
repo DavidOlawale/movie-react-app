@@ -7,3 +7,20 @@
   width: 100%;
   object-position: 100% 30%;
 }
+
+.movie-container {
+  display: grid;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-container {
+    grid-template-columns: repeat(3, 1fr);
+  } 
+}
+
+@media screen and (min-width: 1080px) {
+  .movie-container {
+    grid-template-columns: repeat(4, 1fr);
+  } 
+}
