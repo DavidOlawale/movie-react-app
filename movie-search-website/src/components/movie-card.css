@@ -6,7 +6,9 @@
 .movie-item-header{
   position: absolute;
   margin: 10px;
-  width: 100%;
   left: 0;
   right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
