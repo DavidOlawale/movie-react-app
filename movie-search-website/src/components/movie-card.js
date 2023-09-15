@@ -1,3 +1,4 @@
+import "./movie-card.css";
 import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ poster_path, title, release_date, id }) => {
@@ -8,15 +9,14 @@ const MovieCard = ({ poster_path, title, release_date, id }) => {
 
 
   return (
-    <div className="cursor-pointer" onClick={clicked}>
+    <div className="movie-item" onClick={clicked}>
+      <div class="movie-item-header">
+        <button class="rounded-full bg-white opacity-80 px-3 py-1">TV SERIES</button>
+      </div>
         <img
           src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
           alt={title}
         />
-
-        <p className="block text-sm">
-          TV SERIES
-        </p>
     
       <div className="flex flex-col">
         <p className="text-gray-500 text-min text-left py-1 block" data-testid="movie-release-date">

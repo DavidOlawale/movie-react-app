@@ -120,18 +120,19 @@ function Home() {
             )}
             {movies.length < 1 && <div>no movie yet</div>}
           </div>
-          <div className="p-10 w-full justify-center items-center flex flex-col">
-            <div className="py-10 flex w-11/12 flex-row justify-between items-center ">
-              <span className="text-black pl_10 font-semibold text-2xl block">
-                Top 10 movies {val && show && `for search result "${val}"`}
+          <div className="p-10 w-full justify-center flex flex-col">
+            <div className="py-10 flex flex-row justify-between items-center ">
+              <span className="text-black font-semibold text-4xl">
+                Featured Movies {val && show && `for search result "${val}"`}
               </span>
-              <span className="block text-red-500 cursor-pointer text-lg">
-                see more {`>`}
+              <span className="block text-red-500 cursor-pointer text-3xl">
+                See more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="h-6 inline">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+</svg>
+
               </span>
             </div>
-            <div className="w-full justify-center items-center flex">
-              <TopMovies movies={movies} />
-            </div>
+            <TopMovies movies={movies} /> 
           </div>
           </div>
         </>

@@ -1,0 +1,10 @@
+.movie-item{
+  cursor: pointer;
+  position: relative;
+}
+
+.movie-item-header{
+  position: absolute;
+  margin: 10px;
+  border-radius: 9999px;
+}
