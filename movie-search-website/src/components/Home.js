@@ -78,7 +78,9 @@ function Home() {
       )}
       {!loading && !error && (
         <>
-          <div className="w-full h-min bg-gray-700 flex flex-col justify-evenly items-center">
+          <div>
+          <div class="absolute top-0 left-0 w-full h-min bg-black bg-opacity-40 z-10"></div>
+          <div className="w-full h-min bg-gray-700 flex flex-col justify-evenly items-center relative p-6">
             <nav className="flex z-10 justify-evenly w-4/5 py-5 items-center relative h-1/6">
               <div className="w-2/5 flex items-center">
                 <Logo />
@@ -130,6 +132,7 @@ function Home() {
             <div className="w-full justify-center items-center flex">
               <TopMovies movies={movies} />
             </div>
+          </div>
           </div>
         </>
       )}
