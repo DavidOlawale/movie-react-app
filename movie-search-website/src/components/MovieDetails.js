@@ -11,6 +11,7 @@ import Logout from "../asset/logout";
 import LIst from "../asset/list";
 import Ticket from "../asset/ticket";
 import Open from "../asset/open";
+import config from "../config";
 
 function MovieDetails() {
   const { id } = useParams();
@@ -23,7 +24,7 @@ function MovieDetails() {
     fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, {
       headers: {
         "content-type": "application/json",
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZTQ5MTlkMDYzMWU4OWU5MTgyMDc4NTBiZjJiNGIwZCIsInN1YiI6IjY0ZmVkYTJjZGI0ZWQ2MTA0MzA4NjVlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.SPMygPqE4bA0h-_L2xez1SicsVFYMitC1CtoEzVWmJk`,
+        Authorization: config.moviedbAuthToken,
       },
     }).then(async (res) => {
       if (!res.ok) {

@@ -6,6 +6,7 @@ import TopMovies from "./top-movies";
 import Logo from "../asset/logo";
 import SIgnIN from "../asset/sigin";
 import Search from "../asset/search";
+import config from '../config';
 
 function Home() {
   const [movies, setMovies] = useState([]);
@@ -15,10 +16,10 @@ function Home() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", {
+    fetch(config.moviedbApiUrl, {
       headers: {
         "content-type": "application/json",
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZTcyN2VmZjU3MjRhM2Q3ZjM3YjBiMGRhY2EwN2I2MiIsInN1YiI6IjY0ZmVjZmYxNmEyMjI3MDBjM2I1MzM0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xSNA6RDhbNpE_I90ngPddOpK5ccz-TqeG_Kq6y7ZGsk`,
+        Authorization: config.moviedbAuthToken,
       },
     }).then(async (res) => {
       if (!res.ok) {
@@ -43,11 +44,11 @@ function Home() {
       headers: {
         accept: "application/json",
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZTcyN2VmZjU3MjRhM2Q3ZjM3YjBiMGRhY2EwN2I2MiIsInN1YiI6IjY0ZmVjZmYxNmEyMjI3MDBjM2I1MzM0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xSNA6RDhbNpE_I90ngPddOpK5ccz-TqeG_Kq6y7ZGsk",
+          config.moviedbAuthToken,
       },
     };
     fetch(
-      `https://api.themoviedb.org/3/search/movie?query=${val}&include_adult=false&language=en-US&page=1`,
+      config.moviedbApiUrl,
       options
     )
       .then((response) => response.json())
