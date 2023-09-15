@@ -10,7 +10,6 @@ const MoviePoster = ({ movies }) => {
             {movies[0].title}
           </span>
           <span className="block text-3xl text-white font-bold">
-            Parabellum
           </span>
         </div>
         <div className="flex flex-row justify-start w-full align-middle">
@@ -19,7 +18,7 @@ const MoviePoster = ({ movies }) => {
           <span className="text-white">## 97%</span>
         </div>
         <div className="flex flex-col w-4/5">
-          <span className="text-white block">{movies[0].overview}</span>
+          <span className="text-white block movieOverview">{movies[0].overview}</span>
           <span className="bg-red-600 w-3/5 my-2 flex items-center justify-center rounded-md p-2 ">
             <Watch />
             <span className="text-white px-2 text-center"> WATCH TRAILER</span>
