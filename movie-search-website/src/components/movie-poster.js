@@ -9,9 +9,6 @@ const MoviePoster = ({ movies }) => {
           <span className="block text-3xl text-white font-bold">
             {movies[0].title}
           </span>
-          <span className="block text-3xl text-white font-bold">
-            Parabellum
-          </span>
         </div>
         <div className="flex flex-row justify-start w-full align-middle">
           <span className="text-white">IMDB</span>
