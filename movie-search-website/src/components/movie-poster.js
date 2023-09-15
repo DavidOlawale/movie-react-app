@@ -29,7 +29,7 @@ const MoviePoster = ({ movies }) => {
       <div className="absolute w-full h-min  left-0 top-0 z-0">
         <div className="w-full relative h-min overflow-hidden">
           <img
-            src={`https://image.tmdb.org/t/p/w300/${movies[0].backdrop_path}`}
+            src={`https://image.tmdb.org/t/p/original/${movies[0].backdrop_path}`}
             alt=" val"
             className="h-full absolute object-cover w-full"
           />

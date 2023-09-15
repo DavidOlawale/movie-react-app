@@ -106,7 +106,7 @@ function MovieDetails() {
           <>
             <div className="w-4/5 relative h-3/6 overflow-hidden shadow-2xl rounded-3xl">
               <img
-                src={`https://image.tmdb.org/t/p/w300/${movie.backdrop_path}`}
+                src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
                 alt={movie.title}
                 className="absolute z-0 top-0 left-0 h-full w-full object-cover"
               />
@@ -183,7 +183,7 @@ function MovieDetails() {
                 <span className="flex h-44 w-full rounded-xl overflow-hidden justify-between items-center flex-wrap bg-white mt-2 relative">
                   <span className="z-0 block h-full relative w-full overflow-hidden">
                     <img
-                      src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                      src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                       alt={movie.title}
                       className="object-cover absolute h-full w-full"
                     />

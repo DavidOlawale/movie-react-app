@@ -10,7 +10,7 @@ const MovieCard = ({ poster_path, title, release_date, id }) => {
   return (
     <div className="cursor-pointer" onClick={clicked}>
         <img
-          src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
+          src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
           alt={title}
         />
 
