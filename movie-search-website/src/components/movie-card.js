@@ -1,4 +1,5 @@
 import "./movie-card.css";
+import HeartIcon from "./Utils/heart-icon";
 import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ poster_path, title, release_date, id }) => {
@@ -12,6 +13,7 @@ const MovieCard = ({ poster_path, title, release_date, id }) => {
     <div className="movie-item" onClick={clicked}>
       <div class="movie-item-header">
         <button class="rounded-full bg-white opacity-80 px-3 py-1">TV SERIES</button>
+        <HeartIcon isChecked={false} />
       </div>
         <img
           src={`https://image.tmdb.org/t/p/w500/${poster_path}`}

@@ -6,5 +6,7 @@
 .movie-item-header{
   position: absolute;
   margin: 10px;
-  border-radius: 9999px;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
