@@ -7,6 +7,7 @@ import Logo from "../asset/logo";
 import SIgnIN from "../asset/sigin";
 import Search from "../asset/search";
 import config from '../config';
+import tv from "../asset/tv.png";
 
 function Home() {
   const [movies, setMovies] = useState([]);
@@ -83,10 +84,11 @@ function Home() {
           <div className="w-full h-min bg-gray-700 flex flex-col justify-evenly items-center relative p-6">
             <nav className="flex z-10 justify-evenly w-4/5 py-5 items-center relative h-1/6">
               <div className="w-2/5 flex items-center">
-                <Logo />
-                <span className="pl-2 text-white font-bold text-2xl block">
+                <img className="w-[24px]" src= {tv} alt="Logo" />
+                {/* <Logo /> */}
+               {/* <span className="pl-2 text-white font-bold text-2xl block">
                   MovieBox
-                </span>
+                </span> */}
               </div>
               <form
                 onSubmit={(event) => search(event)}
@@ -98,7 +100,7 @@ function Home() {
                     setShow(false);
                     setVal(event.target.value);
                   }}
-                  placeholder="what do you want to watch?"
+                  placeholder="Search..."
                 />
                 <button className="absolute right-0 w-10 cursor-pointer h-full flex items-center">
                   <Search />
