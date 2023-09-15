@@ -6,24 +6,19 @@ const HeartIcon = ({ isChecked }) => {
     isChecked = !isChecked;
   };
 
-  const [svgClass, setsvgClass] = useState('bg-slate-300 fill-white');
+  const [isFavorite, setIsFavorite] = useState(isChecked);
   
   const handleClick = () => {
-    // Check the current class name and toggle it
-    if (className === 'initial-class') {
-      setClassName('new-class');
-    } else {
-      setClassName('initial-class');
-    }
+    isChecked = !isChecked;
+    setIsFavorite(isChecked);
   };
 
   return (
     
-      <svg onClick={}
+      <svg onClick={handleClick}
         
         class="h-6 inline rounded-full bg-slate-300 fill-white opacity-80 heart-svg"
-        className = isChecked ? "" : 
-        // class="h-6 inline rounded-full bg-rose-300 fill-rose-500 opacity-80 heart-svg"
+        className={isFavorite ? 'bg-rose-300 fill-rose-500' : 'bg-slate-300 fill-white'}
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         overflow="visible"
