@@ -17,7 +17,7 @@ const MoviePoster = ({ movies }) => {
         </div>
         <div className="flex flex-col w-4/5">
           <span className="text-white block">{movies[0].overview}</span>
-          <span className="bg-red-600 w-3/5 my-2 flex items-center justify-center rounded-md p-2 ">
+          <span className="bg-red-600 w-3/5 my-2 flex items-center justify-center rounded-md p-2 mt-6">
             <Watch />
             <span className="text-white px-2 text-center"> WATCH TRAILER</span>
           </span>

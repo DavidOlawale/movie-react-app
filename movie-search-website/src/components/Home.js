@@ -93,7 +93,7 @@ function Home() {
                 className="input_container relative shadow-sm w-full shadow-white flex items-center justify-center"
               >
                 <input
-                  className="input"
+                  className="input pl-2 pr-2"
                   onChange={(event) => {
                     setShow(false);
                     setVal(event.target.value);
