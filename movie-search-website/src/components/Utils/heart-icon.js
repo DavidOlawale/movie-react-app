@@ -2,23 +2,17 @@ import "./heart-icon.css";
 import React, { useState } from 'react';
 
 const HeartIcon = ({ isChecked }) => {
-  const clicked = () => {
-    isChecked = !isChecked;
-  };
-
-  const [isFavorite, setIsFavorite] = useState(isChecked);
+const [isFavorite, setIsFavorite] = useState(isChecked);
   
   const handleClick = () => {
-    isChecked = !isChecked;
-    setIsFavorite(isChecked);
+    setIsFavorite(!isFavorite);
   };
 
   return (
     
       <svg onClick={handleClick}
         
-        class="h-6 inline rounded-full bg-slate-300 fill-white opacity-80 heart-svg"
-        className={isFavorite ? 'bg-rose-300 fill-rose-500' : 'bg-slate-300 fill-white'}
+        className={isFavorite ? ' h-6 inline rounded-full opacity-80 heart-svg bg-rose-300 fill-rose-500' : 'h-6 inline rounded-full opacity-80 heart-svg bg-slate-300 fill-white'}
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         overflow="visible"

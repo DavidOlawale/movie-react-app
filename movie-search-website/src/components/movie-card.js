@@ -10,17 +10,18 @@ const MovieCard = ({ poster_path, title, release_date, id }) => {
 
 
   return (
-    <div className="movie-item" onClick={clicked}>
-      <div class="movie-item-header">
-        <span class="rounded-full bg-white opacity-80 px-3 py-1">TV SERIES</span>
+    <div className="movie-item">
+      <div className="movie-item-header">
+        <span className="rounded-full bg-white opacity-80 px-3 py-1">TV SERIES</span>
         <HeartIcon isChecked={false} />
       </div>
         <img
+          onClick={clicked}
           src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
           alt={title}
         />
     
-      <div className="flex flex-col">
+      <div onClick={clicked} className="flex flex-col">
         <p className="text-gray-500 text-min text-left py-1 block" data-testid="movie-release-date">
           {release_date}
         </p>
