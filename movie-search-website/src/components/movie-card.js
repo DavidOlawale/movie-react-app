@@ -12,7 +12,7 @@ const MovieCard = ({ poster_path, title, release_date, id }) => {
   return (
     <div className="movie-item">
       <div className="movie-item-header">
-        <span className="rounded-full bg-white opacity-80 px-3 py-1">TV SERIES</span>
+        <span className="rounded-full bg-white opacity-80 px-3 py-2">TV SERIES</span>
         <HeartIcon isChecked={false} />
       </div>
         <img
